@@ -1,5 +1,6 @@
 import { io } from "socket.io-client";
 import updateRoomList from "./updateRoomList";
+import displayChatRoom from "./displayChatRoom";
 const socket = io("http://localhost:3000");
 
 export default function displayMainPage() {
@@ -33,6 +34,7 @@ export default function displayMainPage() {
         if (roomName) {
             socket.emit("create room", roomName); 
             socket.emit("join room", roomName); 
+            displayChatRoom(roomName);
         }
     });
 }
