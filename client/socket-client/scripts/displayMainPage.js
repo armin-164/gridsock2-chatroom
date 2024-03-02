@@ -4,6 +4,8 @@ import displayChatRoom from "./displayChatRoom";
 const socket = io("http://localhost:3000");
 
 export default function displayMainPage() {
+    
+    document.body.innerHTML = "";
     const mainContainer = document.createElement("div");
     mainContainer.classList.add("main-container");
 
