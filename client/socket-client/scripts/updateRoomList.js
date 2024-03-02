@@ -3,7 +3,7 @@ import displayChatRoom from "./displayChatRoom";
 const socket = io("http://localhost:3000");
 
 export default function updateRoomList(rooms) {
-    const roomsContainer = document.querySelector(".rooms-container");
+    const roomsContainer = document.querySelector(".rooms_container");
     roomsContainer.innerHTML = "";
     rooms.forEach(room => {
         const roomName = document.createElement("button");
