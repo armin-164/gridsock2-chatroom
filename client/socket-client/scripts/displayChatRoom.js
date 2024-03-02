@@ -1,3 +1,5 @@
+import displayMainPage from "./displayMainPage";
+
 export default function displayChatRoom(room) {
     document.body.innerHTML = "";
 
@@ -23,6 +25,8 @@ export default function displayChatRoom(room) {
         </div>
     </div>
     `
+    document.body.appendChild(chatPage);
 
-    document.body.appendChild(chatPage)
+    const leaveRoomBtn = document.querySelector(".leave-room-btn");
+    leaveRoomBtn.addEventListener("click", displayMainPage);
 }
