@@ -11,7 +11,7 @@ const io = require("socket.io")(server, {
 io.on("connection", (socket) => {
     //console.log("connection", socket)
 
-    socket.emit("chat", "hi there")
+    socket.emit("chat", {message: 'Welcome to the chat!', user: 'Admin'})
 
     socket.on("chat", (arg) => {
         console.log("incoming chat", arg);
