@@ -6,7 +6,7 @@ export default function updateRoomList(rooms) {
     const roomsContainer = document.querySelector(".rooms-container");
     roomsContainer.innerHTML = "";
     rooms.forEach(room => {
-        const roomName = document.createElement("div");
+        const roomName = document.createElement("button");
         roomName.textContent = room;
         roomName.addEventListener("click", () => {
             socket.emit("join room", room);
