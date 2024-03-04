@@ -1,11 +1,11 @@
 import { io } from 'socket.io-client';
 import printStart from './scripts/printStart.mjs';
+import displayMainPage from './scripts/displayMainPage';
 const socket = io('http://localhost:3000');
 
 // User state check
 if (sessionStorage.getItem('user')) {
-  // Add function to print rooms?
-  console.log('User stored in sessionStorage');
+  displayMainPage();
 } else {
   printStart();
 }

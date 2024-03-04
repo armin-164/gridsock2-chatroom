@@ -1,3 +1,5 @@
+import displayMainPage from "./displayMainPage";
+
 export default function printStart() {
   const body = document.body;
 
@@ -33,7 +35,7 @@ export default function printStart() {
     let userName = nameInput.value;
     sessionStorage.setItem('user', userName);
     nameInput.value = '';
-    // ADD function to print room options
+    displayMainPage();
   });
 
   nameContainer.append(nameLabel, enterBtn);
